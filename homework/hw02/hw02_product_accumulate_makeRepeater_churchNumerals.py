@@ -15,6 +15,7 @@ increment = lambda x: x + 1
 ######################
 # Required Questions #
 ######################
+
 def product(n, f):
     """Return the product of the first n terms in a sequence.
     n -- a positive integer
@@ -66,7 +67,21 @@ def accumulate(combiner, base, n, f):
     16
     """
     "*** YOUR CODE HERE ***"
-
+    #intilize total with the value of base
+    #initilize k, recorder, with value 1
+    total, k = base, 1
+    #loop though the sequence to build total by applying combiner
+    while k <= n:
+        total, k = combiner(total, f(k)), k + 1
+    return total
+# print(accumulate(add, 0, 5, identity))
+# print(accumulate(add, 11, 5, identity))
+# print(accumulate(add, 11, 0, identity))
+# print(accumulate(add, 11, 3, square))
+# print(accumulate(mul, 2, 3, square))
+# print(accumulate(lambda x, y: x + y + 1, 2, 3, square))
+# print(accumulate(lambda x, y: 2 * (x + y), 2, 3, square))
+# print(accumulate(lambda x, y: (x + y) % 17, 19, 20, square))
 def summation_using_accumulate(n, f):
     """Returns the sum of f(1) + ... + f(n). The implementation
     uses accumulate.
