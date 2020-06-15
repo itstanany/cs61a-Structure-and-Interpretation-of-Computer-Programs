@@ -96,7 +96,9 @@ def summation_using_accumulate(n, f):
     ...       ['Recursion', 'For', 'While'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    return accumulate(add, 0, n, f)
+# print("summation_using_accumulate(5, square)", summation_using_accumulate(5, square))
+# print("summation_using_accumulate(5, triple", summation_using_accumulate(5, triple))
 
 def product_using_accumulate(n, f):
     """An implementation of product using accumulate.
