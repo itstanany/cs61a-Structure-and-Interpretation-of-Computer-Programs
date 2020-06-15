@@ -79,10 +79,10 @@ def free_bacon(score):
     return abs(sum) + 1
     # END PROBLEM 2
 
-print("free_bacon(4)", free_bacon(4))
-print("free_bacon()", free_bacon(1))
-print("free_bacon()", free_bacon(20))
-print("free_bacon()", free_bacon(45))
+# print("free_bacon(4)", free_bacon(4))
+# print("free_bacon()", free_bacon(1))
+# print("free_bacon()", free_bacon(20))
+# print("free_bacon()", free_bacon(45))
 def take_turn(num_rolls, opponent_score, dice=six_sided):
     """Simulate a turn rolling NUM_ROLLS dice, which may be 0 (Free Bacon).
     Return the points scored for the turn by the current player.
@@ -117,8 +117,21 @@ def is_swap(player_score, opponent_score):
     """
     # BEGIN PROBLEM 4
     "*** YOUR CODE HERE ***"
-    # END PROBLEM 4
+    #raise three to the power of players' score sum
+    powered_three = pow(3, (player_score + opponent_score))
+    ##test for equality of firat and list digit
 
+        #if true, return true
+        #otherwise return false
+    if str(powered_three)[0] == str(powered_three)[-1]:
+        return True
+    else:
+        return False
+    # END PROBLEM 4
+# print("false", is_swap(2, 4))
+# print("false", is_swap(11, 1))
+# print("true", is_swap(1, 0))
+# print("true", is_swap(23, 4))
 
 def other(who):
     """Return the other player, for a player WHO numbered 0 or 1.
