@@ -138,7 +138,21 @@ def make_repeater(h, n):
     5
     """
     "*** YOUR CODE HERE ***"
-
+    k = 1
+    if n > 0:
+        result = h
+    else:
+        return identity
+    while k < n:
+        result =  compose1(result, h)
+        k = k + 1
+    return result
+# add_three = make_repeater(increment, 3)
+# print("add_three(5)", add_three(5))
+# print("make_repeater(triple, 5)(1)", make_repeater(triple, 5)(1))
+# print("make_repeater(square, 2)(5)", make_repeater(square, 2)(5))
+# print("make_repeater(square, 4)(5)", make_repeater(square, 4)(5))
+# print("make_repeater(square, 0)(5)", make_repeater(square, 0)(5))
 
 ##########################
 # Just for fun Questions #
