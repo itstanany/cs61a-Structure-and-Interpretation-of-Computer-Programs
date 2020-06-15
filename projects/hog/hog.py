@@ -55,15 +55,32 @@ def free_bacon(score):
     assert score < 100, 'The game should be over.'
     # BEGIN PROBLEM 2
     "*** YOUR CODE HERE ***"
-    #var of the first digit
-    fst_digt = int(str(score)[0])
-    #var of the second digit
-    scnd_digt = int(str(score)[1])
-    #return the desired value
-    return pow(abs(fst_digt - scnd_digt), 3) + 1
+    #cubed score
+    cubed_score = pow(score , 3)
+    #variable to make the sum alternating difference of the digits, if it's even make it difference
+    #if it's odd make it addition
+    k = 0
+    #initilize varibale to hold accumulated sum of alternating difference of the digits
+    sum = 0
+    #loop that extract each digit per iteration
+    #then reduces the number one digit by removing extracteed digit
+    #inspired from MIT 6.0001 algorithm of extracting digits from number of base 10
+    while cubed_score > 1:
+        #if the current iteratio is even, perform a subtraction 
+        if k%2 == 0:
+            sum = sum - cubed_score%10
+        else: 
+            sum = sum + cubed_score%10
+        #remove the trailing digit
+        cubed_score = cubed_score//10
+        k += 1
+    return abs(sum) + 1
     # END PROBLEM 2
 
-# print("free_bacon(15)", free_bacon(15))
+print("free_bacon(4)", free_bacon(4))
+print("free_bacon()", free_bacon(1))
+print("free_bacon()", free_bacon(20))
+print("free_bacon()", free_bacon(45))
 def take_turn(num_rolls, opponent_score, dice=six_sided):
     """Simulate a turn rolling NUM_ROLLS dice, which may be 0 (Free Bacon).
     Return the points scored for the turn by the current player.
