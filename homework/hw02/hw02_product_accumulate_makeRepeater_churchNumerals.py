@@ -113,8 +113,9 @@ def product_using_accumulate(n, f):
     ...       ['Recursion', 'For', 'While'])
     True
     """
-    "*** YOUR CODE HERE ***"
-
+    return accumulate(mul, 1, n, f)
+# print("product_using_accumulate(4, square)",product_using_accumulate(4, square))
+# print("product_using_accumulate(6, triple)",product_using_accumulate(6, triple))
 def compose1(h, g):
     """Return a function f, such that f(x) = h(g(x))."""
     def f(x):
