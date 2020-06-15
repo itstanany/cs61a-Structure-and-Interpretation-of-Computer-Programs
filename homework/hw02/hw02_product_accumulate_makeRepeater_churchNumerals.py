@@ -34,6 +34,14 @@ def product(n, f):
     162
     """
     "*** YOUR CODE HERE ***"
+    #make total variable twith intial value =1, multiplication identitive
+    #also, make var k to track numbers in the sequence
+    total, k = 1, 1
+    #make the loop that builds up a total accoridng to the "f"
+    while k <= n:
+        total, k = total * f(k), k + 1
+    #return the total var
+    return total
 
 def accumulate(combiner, base, n, f):
     """Return the result of combining the first n terms in a sequence and base.
