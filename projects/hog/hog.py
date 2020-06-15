@@ -22,9 +22,31 @@ def roll_dice(num_rolls, dice=six_sided):
     assert num_rolls > 0, 'Must roll at least once.'
     # BEGIN PROBLEM 1
     "*** YOUR CODE HERE ***"
+    #makea boolean var to hold the state of returning one in a role
+    outOne = False
+    #initilize variable to hold the sum of rolls
+    total = 0
+    #intilize variable to track number of apllied rolls
+    k = 0
+    #loop num_rolls to build the sum
+    while k < num_rolls:
+        current_dice = dice()
+        #make returning one in out put true
+        if current_dice == 1:
+            outOne = True
+        total = total + current_dice
+        k += 1
+    #test for output one
+    #if true, return one
+    #otherise return the total sum
+    if outOne:
+        return 1
+    else:
+        return total
+        
     # END PROBLEM 1
 
-
+print("roll_dice(3)", roll_dice(3))
 def free_bacon(score):
     """Return the points scored from rolling 0 dice (Free Bacon).
 
