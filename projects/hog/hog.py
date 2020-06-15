@@ -79,9 +79,19 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     assert opponent_score < 100, 'The game should be over.'
     # BEGIN PROBLEM 3
     "*** YOUR CODE HERE ***"
+    #test for num rolls == 0
+    #if true, return function of free bacon
+    #otherwise return roll dice function
+    if num_rolls == 0:
+        #return call of free bacon with oppenent score
+        return free_bacon(opponent_score)
+    else:
+        #here we call function roll_dice and argumetnts are evaluated from take_turn parameters
+        return roll_dice(num_rolls, dice)
+
     # END PROBLEM 3
 
-
+# print("take_turn(0, 51, six_sided)", take_turn(0, 51, six_sided))
 def is_swap(player_score, opponent_score):
     """
     Return whether the two scores should be swapped
