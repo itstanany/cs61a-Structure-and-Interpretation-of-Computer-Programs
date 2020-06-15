@@ -73,7 +73,9 @@ def free_bacon(score):
             sum = sum + cubed_score%10
         #remove the trailing digit
         cubed_score = cubed_score//10
+        #change parity 
         k += 1
+    #the return is equal to one more than the absolute alternating difference of the digits of the opponent's score cubed.
     return abs(sum) + 1
     # END PROBLEM 2
 
