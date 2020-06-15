@@ -46,7 +46,7 @@ def roll_dice(num_rolls, dice=six_sided):
         
     # END PROBLEM 1
 
-print("roll_dice(3)", roll_dice(3))
+# print("roll_dice(3)", roll_dice(3))
 def free_bacon(score):
     """Return the points scored from rolling 0 dice (Free Bacon).
 
@@ -55,9 +55,15 @@ def free_bacon(score):
     assert score < 100, 'The game should be over.'
     # BEGIN PROBLEM 2
     "*** YOUR CODE HERE ***"
+    #var of the first digit
+    fst_digt = int(str(score)[0])
+    #var of the second digit
+    scnd_digt = int(str(score)[1])
+    #return the desired value
+    return pow(abs(fst_digt - scnd_digt), 3) + 1
     # END PROBLEM 2
 
-
+# print("free_bacon(15)", free_bacon(15))
 def take_turn(num_rolls, opponent_score, dice=six_sided):
     """Simulate a turn rolling NUM_ROLLS dice, which may be 0 (Free Bacon).
     Return the points scored for the turn by the current player.
