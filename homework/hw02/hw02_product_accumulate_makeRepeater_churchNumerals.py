@@ -157,7 +157,7 @@ def make_repeater(h, n):
 ##########################
 # Just for fun Questions #
 ##########################
-
+#leave it till stusying lambda calculus
 def zero(f):
     return lambda x: x
 
