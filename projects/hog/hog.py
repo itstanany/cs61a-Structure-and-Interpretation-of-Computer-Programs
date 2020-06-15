@@ -171,8 +171,15 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
     #variable to hold the scores of the first and second player respectively
     score0 = score0
     score1 = score1
+    #var for holding last score of the first player 
+    last_score0 = 0
+    #var to hold the last score of the second player
+    last_score1 = 0
+    
     #players alternate turns rolling dice until one of the players reaches the goal score.
     while not (score0 >= goal or score1 >= goal):
+        #var valued three only if feral_hogs is true, zero otherwise its value is zero
+        feral3 = 0
         #test for validity of scores
         assert score0 >= 0, 'score of first player must be nonnegative integer'
         assert score1 >= 0, 'score of the second player must be nonnegative integer'  
@@ -182,19 +189,25 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
             #get the number of rolls the user want to play and test for its validity
             first_dice_num = strategy0(score0, score1)
             assert first_dice_num >= 0, 'strategy0 must return nonnegative integer'
+            if abs(first_dice_num - last_score0) == 2 and feral_hogs:
+                feral3 = 3
             #play the turn and add the result to the previous one
-            score0 += take_turn(first_dice_num, score1, dice)
+            last_score0 = take_turn(first_dice_num, score1, dice)
+            score0 += (last_score0 + feral3)
             #change the user to the other player
             who  = other(0)
         #the second user
         else:
             #get the number of rolls the user want to play and test for its validity
             scnd_dice_num = strategy1(score1, score0)
-            assert scnd_dice_num >= 0, 'strategy1 must return nonnegative integer'
+            assert scnd_dice_num >= 0, 'strategy0 must return nonnegative integer'
+            if abs(scnd_dice_num - last_score1) == 2 and feral_hogs:
+                feral3 = 3
             #play the turn and add the result to the previous one
-            score1 += take_turn(scnd_dice_num, score0, dice=six_sided)
+            last_score1 = take_turn(scnd_dice_num, score0, dice)
+            score1 += (last_score1 + feral3)
             #change the user to the other player
-            who = other(1)
+            who  = other(1)
 
     # END PROBLEM 5
     # (note that the indentation for the problem 6 prompt (***YOUR CODE HERE***) might be misleading)
