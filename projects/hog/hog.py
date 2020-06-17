@@ -169,6 +169,8 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
     who = 0  # Who is about to take a turn, 0 (first) or 1 (second)
     # BEGIN PROBLEM 5
     #variable to hold the scores of the first and second player respectively
+    #to assert their values to be nonengative at the beginning of each turn
+    #also they are built incremently at each turn
     score0 = score0
     score1 = score1
     #var for holding last score of the first player 
@@ -221,12 +223,23 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
 # Phase 2: Commentary #
 #######################
 
-
+# this function returns itself each time is called,
+# so if it appears in expression place of assignment statement, it will bind
+#this name with this function
+#as a result, this name will be callable with two arguments
 def say_scores(score0, score1):
     """A commentary function that announces the score for each player."""
     print("Player 0 now has", score0, "and Player 1 now has", score1)
     return say_scores
 
+
+#this function takes the previous leader as its only single argument
+#it retuens a local defined function
+# so, any time that local defined function is called,
+# it has access to the atgiment prev_leader from its parent function announce_lead_changes
+# also note that, when "say" function is called, its return expression is 
+#call invocation of its parent function announce_lead_changes, and this parent
+#return expression is the function object "say"
 def announce_lead_changes(prev_leader=None):
     """Return a commentary function that announces lead changes.
 
