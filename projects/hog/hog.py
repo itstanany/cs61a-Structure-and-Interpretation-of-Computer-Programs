@@ -166,6 +166,9 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
     say:        The commentary function to call at the end of the first turn.
     feral_hogs: A boolean indicating whether the feral hogs rule should be active.
     """
+    #after several testing, it appeared that
+    #the function prints on the terminal all past history of all turns in that game each time turn is played
+    #one turn is ended only if the function "strategey of the other player is called"
     who = 0  # Who is about to take a turn, 0 (first) or 1 (second)
     # BEGIN PROBLEM 5
     #variable to hold the scores of the first and second player respectively
@@ -173,13 +176,23 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
     #also they are built incremently at each turn
     score0 = score0
     score1 = score1
-    #var for holding last score of the first player 
+    #var for holding last score to be used in printing last score in both0 function
+    #at the end of each turn
     last_score0 = 0
-    #var to hold the last score of the second player
     last_score1 = 0
-    
+
+    #initilize bith function to get callable object "both0" that takes last score of 
+    #of player 0 and player one and print the last score of each and announce the lead change
+    #throughout the game
+    both0 = both(say_scores, announce_lead_changes())
+
     #players alternate turns rolling dice until one of the players reaches the goal score.
-    while not (score0 >= goal or score1 >= goal):
+    while not (score0 >= 100 or score1 >= 100):
+        #any turn is ended if and only if there is a call to the other strategy function
+        if who == 0:
+            first_dice_num = strategy0(score0, score1)
+        elif who == 1:
+            scnd_dice_num = strategy1(score1, score0)
         #var valued three only if feral_hogs is true, zero otherwise its value is zero
         feral3 = 0
         #test for validity of scores
@@ -188,34 +201,31 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
         #determine which user is playing this turn   
         # the first user   
         if who == 0:
-            #get the number of rolls the user want to play and test for its validity
-            first_dice_num = strategy0(score0, score1)
             assert first_dice_num >= 0, 'strategy0 must return nonnegative integer'
+            #enabling feral_hogs if true
             if abs(first_dice_num - last_score0) == 2 and feral_hogs:
                 feral3 = 3
             #play the turn and add the result to the previous one
             last_score0 = take_turn(first_dice_num, score1, dice)
             score0 += (last_score0 + feral3)
-            #change the user to the other player
-            who  = other(0)
+        
         #the second user
-        else:
-            #get the number of rolls the user want to play and test for its validity
-            scnd_dice_num = strategy1(score1, score0)
+        elif who == 1:
             assert scnd_dice_num >= 0, 'strategy0 must return nonnegative integer'
             if abs(scnd_dice_num - last_score1) == 2 and feral_hogs:
                 feral3 = 3
-            #play the turn and add the result to the previous one
             last_score1 = take_turn(scnd_dice_num, score0, dice)
             score1 += (last_score1 + feral3)
-            #change the user to the other player
-            who  = other(1)
-
-    # END PROBLEM 5
+        #change the user to the other player
+        who = other(who)
+        # END PROBLEM 5
+        # BEGIN PROBLEM 6
+        #print the score of each player and if there is lead change, announce it!
+        both0 = both0(last_score0, last_score1)
+        # END PROBLEM 6
+    
     # (note that the indentation for the problem 6 prompt (***YOUR CODE HERE***) might be misleading)
-    # BEGIN PROBLEM 6
-    "*** YOUR CODE HERE ***"
-    # END PROBLEM 6
+    
     return score0, score1
 
 
