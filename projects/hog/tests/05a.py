@@ -13,7 +13,7 @@ test = {
             'While score1 is less than goal'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           The variables score0 and score1 are the scores for Player 0
           and Player 1, respectively. Under what conditions should the
@@ -28,7 +28,7 @@ test = {
             "A player's desired turn outcome"
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What is a strategy in the context of this game?'
         },
         {
@@ -40,7 +40,7 @@ test = {
             'strategy1(score0)'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           If strategy1 is Player 1's strategy function, score0 is
           Player 0's current score, and score1 is Player 1's current
@@ -67,7 +67,7 @@ test = {
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -82,7 +82,7 @@ test = {
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -125,7 +125,7 @@ test = {
           # locked
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -192,3 +192,4 @@ test = {
     }
   ]
 }
+print("END")

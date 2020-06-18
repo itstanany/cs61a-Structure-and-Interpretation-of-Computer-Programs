@@ -185,7 +185,9 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
     #of player 0 and player one and print the last score of each and announce the lead change
     #throughout the game
     both0 = both(say_scores, announce_lead_changes())
-
+    #commentary function to announce highest score for each player,
+    #  whenever the player croses the latest highest score
+    say = both(announce_highest(0), announce_highest(1))
     #players alternate turns rolling dice until one of the players reaches the goal score.
     while not (score0 >= 100 or score1 >= 100):
         #any turn is ended if and only if there is a call to the other strategy function
@@ -218,10 +220,15 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
             score1 += (last_score1 + feral3)
         #change the user to the other player
         who = other(who)
+        #in case of swap, interchange the scores
+        if is_swap(score0, score1):
+            score0, score1 = score1, score0
         # END PROBLEM 5
         # BEGIN PROBLEM 6
         #print the score of each player and if there is lead change, announce it!
         both0 = both0(last_score0, last_score1)
+        #aannounce the highest score if the latest highest is crossed
+        say = say(score0, score1)
         # END PROBLEM 6
     
     # (note that the indentation for the problem 6 prompt (***YOUR CODE HERE***) might be misleading)
@@ -322,6 +329,28 @@ def announce_highest(who, prev_high=0, prev_score=0):
     assert who == 0 or who == 1, 'The who argument should indicate a player.'
     # BEGIN PROBLEM 7
     "*** YOUR CODE HERE ***"
+    #define a function that takes the current scores of both player
+    #test for who, in both case, if there is highest, return new call of the announce_highest withthe new args
+    #for zero compare with first argument
+    #for who ==1 cpmpare with the seond argument
+    #if there is no new high, return announce_highest with the same args
+    def say_highest(score0, score1):
+        if who == 0:
+            diff = score0 - prev_score
+            if (diff) > prev_high:
+                print(diff, "point(s)! That's the biggest gain yet for Player 0")
+                return announce_highest(0, diff, score0)
+            else:
+                return announce_highest(0, prev_high, score0)
+        elif who == 1:
+            diff = score1 - prev_score
+            if diff > prev_high:
+                print(diff, "point(s)! That's the biggest gain yet for Player 1")
+                return announce_highest(1, diff, score1)
+            else:
+                return announce_highest(1, prev_high, score1)
+    return say_highest
+        
     # END PROBLEM 7
 
 
