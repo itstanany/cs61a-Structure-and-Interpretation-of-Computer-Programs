@@ -419,9 +419,28 @@ def max_scoring_num_rolls(dice=six_sided, num_samples=1000):
     """
     # BEGIN PROBLEM 9
     "*** YOUR CODE HERE ***"
+    #make current dice
+    current_dice = 1
+    #number of dice with the highest max avergae
+    dice_highest_max = 1
+    #last max avaerage
+    last_max_average = 0
+    #loop for each dice
+    while current_dice <= 10:
+        #call the max average with num_rolls functin, that call num_rolls num_samples with the current dice
+        get_max = make_averaged(roll_dice, num_samples)
+        #call return of max_average with current dice num so num_rolls rolls exactly curr_num dice
+        current_max_average = get_max(current_dice, dice)
+        #update the max num of dice and last max avergae if the current averge bigger htat the last
+        print(current_max_average)
+        if current_max_average > last_max_average:
+            last_max_average = current_max_average
+            dice_highest_max = current_dice
+        #loop exit expression update
+        current_dice += 1
+    #return number of dice witht he highest max
+    return dice_highest_max
     # END PROBLEM 9
-
-
 def winner(strategy0, strategy1):
     """Return 0 if strategy0 wins against strategy1, and 1 otherwise."""
     score0, score1 = play(strategy0, strategy1)
