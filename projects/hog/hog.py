@@ -390,6 +390,21 @@ def make_averaged(g, num_samples=1000):
     """
     # BEGIN PROBLEM 8
     "*** YOUR CODE HERE ***"
+    #define a function to taking *args arguments
+    def calc_sum(*args):
+        #counter to loop num_smples times
+        counter = 0
+        #built incremently each time "g" is called
+        sum = 0
+        #loop num_smaples times and in each iteration, call "g" and add the result to sum 
+        #to build the sum incremently
+        while counter < num_samples:
+            sum += g(*args)
+            counter += 1
+        #return the average of calling "g" num_samples times
+        average = sum/num_samples
+        return average
+    return calc_sum
     # END PROBLEM 8
 
 
