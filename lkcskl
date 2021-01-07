@@ -1,0 +1,233 @@
+[33mcommit e5e723db268b5b72b6bc96455ec4bd670934c593[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Ahmad ALy Mohamad ALy Ramadan Tanany <AhmadAlyMohamad@gmail.com>
+Date:   Sun Nov 29 15:18:36 2020 +0200
+
+    HW03 README file
+
+[33mcommit 29bbcd93464cd12be340440d71948ba9a77d635a[m
+Author: Ahmad ALy Mohamad ALy Ramadan Tanany <AhmadAlyMohamad@gmail.com>
+Date:   Sun Nov 29 15:16:02 2020 +0200
+
+    hw03 solution
+
+[33mcommit a16654bc73f02bd807fb144ce721a2a234d1236e[m
+Author: Ahmad ALy Mohamad ALy Ramadan Tanany <AhmadAlyMohamad@gmail.com>
+Date:   Sat Nov 28 17:18:08 2020 +0200
+
+    HW02 Fall 2020 version
+
+[33mcommit ec9a4d17fad21894a1cc16c7efa37c5c8c6331e3[m
+Author: Ahmed Ali Mohamed Tanany <ahmadalymohamad@gmail.com>
+Date:   Fri Nov 27 18:01:39 2020 +0200
+
+    Readme file
+
+[33mcommit e6e85c7fa6bd54cb7c8c33170a10a07857cc1229[m
+Author: Ahmed Ali Mohamed Tanany <ahmadalymohamad@gmail.com>
+Date:   Fri Nov 27 17:43:59 2020 +0200
+
+    CATS Project
+
+[33mcommit 6df325b7bc9b0706667135871eea33e177783f91[m
+Author: Ahmed Ali Mohamed Tanany <ahmadalymohamad@gmail.com>
+Date:   Fri Nov 27 17:33:04 2020 +0200
+
+    hw01 final
+
+[33mcommit efac841065fb5f089ec53eec4b9417c436794231[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 15:36:11 2020 +0200
+
+    writing README file
+
+[33mcommit 4e45453edc5700fc2c11d7579750f218aaa53d7d[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 15:09:53 2020 +0200
+
+    creating readme file for hog projects
+
+[33mcommit fb7ae4b20209b55947749047fd1a2dec1431f43b[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 15:00:38 2020 +0200
+
+    implementing swap_strategy prob11 hog
+
+[33mcommit 2363a8b0b7e38de086da9db59fbb31e5bb5ddd42[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 14:33:56 2020 +0200
+
+    implementing bacon_strategy  functn prob10 hog
+
+[33mcommit b9585d4c0099f04b6b4c9af054ee217be83f7857[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 14:15:10 2020 +0200
+
+    deactivating test for max_scoring_num_rolls hog
+
+[33mcommit e0a6367cf49aff517d12b59b17d12db906d57ce0[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 14:13:45 2020 +0200
+
+    implementing max_scoring_num_rolls functn prob9 hog
+
+[33mcommit a53c307d9b38afc590aee4201c630f054460428f[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 12:35:02 2020 +0200
+
+    implementing make_averged functn prob8 hog
+
+[33mcommit 8bbe42a809ebc9ed9c82501447c0c50a552db37d[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Thu Jun 18 10:34:09 2020 +0200
+
+    implementing announce_highest function problem7 hog
+
+[33mcommit 96391e701ffca565c1dc4dc96a366f0b2bf2bb85[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Wed Jun 17 23:22:44 2020 +0200
+
+    adding both function to play function problem6
+
+[33mcommit 49f97e71fe223b2c75f4a341a4863819f8fc4d71[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Wed Jun 17 18:15:21 2020 +0200
+
+    adding comments to help understanding commentary functions
+
+[33mcommit e29ca2e72c1c3b262638a8c3d46a30cb18c3272e[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 16:58:42 2020 +0200
+
+    implementing play function p5b hog project
+
+[33mcommit 47c547886c685400d859baf86928599f002ab5c4[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 16:32:24 2020 +0200
+
+    implementing play function p5a hog project
+
+[33mcommit af184b30eac09f6590f443234858ff52544d75d6[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 15:25:22 2020 +0200
+
+    implementing is_swap function in hog project
+
+[33mcommit 413be4f44680b566ded5973b52cf106128eaf442[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 15:11:58 2020 +0200
+
+    adding comments for  free_bacon function in hog project
+
+[33mcommit 88277b2e233c17834a9fa27f5671ecfa6da77342[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 15:08:39 2020 +0200
+
+    re-implementing free_bacon function in hog project
+
+[33mcommit 15007b3327add86f8f1c9b2aba8acaacbe4f6d3c[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 14:38:22 2020 +0200
+
+    implementing take_turn function in hog project
+
+[33mcommit 70f2b57f84df59338513b6a5357c788c7a82dcc6[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 14:26:46 2020 +0200
+
+    implementing free_bacon function in hog project
+
+[33mcommit 0a5aa57ac76e5d2278ee36544203845633a8477b[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 14:13:32 2020 +0200
+
+    implementing roll_dice function in hog project
+
+[33mcommit f13a9daa874593e8caad418db83124a46b77d18f[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 13:48:43 2020 +0200
+
+    adding starter files of hog project
+
+[33mcommit 38cbe788e14ff51d95b87778df6977ce8d9cdf08[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 13:12:33 2020 +0200
+
+    postpone church numerals till studying lambda caluclus
+
+[33mcommit 1de259c684d270bd936fc24d97eeb6092a294b64[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 12:52:20 2020 +0200
+
+    implementing make_repeater function hw02
+
+[33mcommit cccda58c308d5a51e3dfb4111a0055f1dac3ea43[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 11:59:00 2020 +0200
+
+    implementing product_using_accumulate function hw02
+
+[33mcommit 6d5c86806ec8800cc49a0dc895ef337ffc7d4808[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 11:54:21 2020 +0200
+
+    implementing summation_using_accumulate function hw02
+
+[33mcommit 56cbc968521de2c4e40505f49dbe9aba6208ac08[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 11:49:59 2020 +0200
+
+    adding __pycache__to gitignore file
+
+[33mcommit 61964503dfbbffbb0c9ff68e16917e59231d19b8[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 11:43:59 2020 +0200
+
+    implementing acccumulate function hw02
+
+[33mcommit 3d1b710ff176b63614e482543f1de2d096837142[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 11:25:58 2020 +0200
+
+    implementing product function hw02
+
+[33mcommit ccf49e7b9633aa1bc2120a5979d787f8f187ff25[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 11:07:56 2020 +0200
+
+    adding starter code for hw02
+
+[33mcommit eb1a84aafb1a0eebfadad4c9a5fd2ed495306bed[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 10:56:01 2020 +0200
+
+    solution for hw01 control
+
+[33mcommit b10ddedc8d5ec20d64903db333c99c8641269322[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 10:54:11 2020 +0200
+
+    homework starte code
+
+[33mcommit c4ee62a54d4663daa3c72121b89b5cde1dec0908[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 10:47:37 2020 +0200
+
+    removing file homework to create a folder
+
+[33mcommit fa98c6f41a765d5ef3e5d4333f3648c620f7e648[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 10:44:43 2020 +0200
+
+    creating folder for homework solution
+
+[33mcommit ea89c5455a7855f26884a8bd80b1d10ef77435c6[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 10:35:05 2020 +0200
+
+    creating readme file
+
+[33mcommit c9cb3f465ecb0d9fedc5af44757f43c6e854ec39[m
+Author: Ahmed Ali Mohamed <ahmadalymohamad@gmail.com>
+Date:   Mon Jun 15 10:34:22 2020 +0200
+
+    creating gitignore file
